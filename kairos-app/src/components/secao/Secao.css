@@ -1,0 +1,149 @@
+/* -------------------- Conteiner -------------------- */
+.secao-conteiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-conteudo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+
+/* -------------------- Cabecalho -------------------- */
+.secao-cabecalho-conteiner {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.secao-cabecalho-conteudo {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secao-cabecalho-conteudo h2 {
+    display: flex;
+    font-size: 2em;
+}
+
+.secao-cabecalho-conteudo nav {
+    gap: 20px;
+    display: flex;
+}
+
+
+/* -------------------- Conteudo -------------------- */
+.secao-conteudo-conteiner {
+    gap: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.secao-conteudo-conteudo {
+    width: 100%;
+}
+
+.secao-conteudo-cabecalho {
+    font-size: 1.5em;
+    color: var(--cor-texto-escuro);
+}
+
+.secao-conteudo-principal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* -------------------- Coluna -------------------- */
+.secao-coluna {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+/* -------------------- Linha -------------------- */
+.secao-linha {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secao-linha div {
+    gap: 20px;
+    display: flex;
+}
+
+.secao-linha h1 {
+    cursor: default;
+    font-size: 2.5vw;
+    background-size: 100%;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, #0053A0, #0475D7);
+}
+
+.secao-linha h2 {
+    font-size: 1.5vw;
+    cursor: default;
+    background-size: 100%;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, #0475D7, #0053A0);
+}
+
+.secao-linha p {
+    cursor: default;
+    font-size: 1vw;
+    color: var(--cor-texto-escuro);
+}
+
+
+/* -------------------- Butao -------------------- */
+.secao-cabecalho-butao {
+    border: none;
+    display: flex;
+    transition: 1s;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 30px;
+    align-items: center;
+    background-color: #F3F3F3;
+    color: var(--cor-texto-escuro);
+}
+
+.secao-cabecalho-butao:hover {
+    transition: .3s;
+    background-color: #FFC893;
+}
+
+.secao-cabecalho-butao img {
+    height: 20px;
+    margin-right: 10px;
+}

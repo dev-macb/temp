@@ -1,0 +1,149 @@
+/* -------------------- Butao -------------------- */
+.butao-conteiner {
+    display: flex;
+}
+
+.butao-conteudo {
+    height: 40px;
+}
+
+.butao-conteudo button {
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+    transition: 1s;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px 30px;
+    align-items: center;
+    border-radius: 10px;
+}
+.butao-conteudo button:hover {
+    transition: .3s;
+}
+
+/* -------------------- Arredondado -------------------- */
+.butao-conteudo .arredondado {
+    border-radius: 40px;
+}
+
+/* -------------------- Tipo -------------------- */
+.butao-primario {
+    border: none;
+    color: #F1F1F1;
+    background-color: var(--cor-primaria);
+}
+
+.butao-secundario {
+    border: none;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-secundaria);
+}
+
+.butao-sucesso {
+    border: none;
+    color: #F1F1F1;
+    background-color: #16A34A;
+}
+
+.butao-info {
+    border: none;
+    color: #F1F1F1;
+    background-color: #0EA5E9;
+}
+
+.butao-aviso {
+    border: none;
+    color: #F1F1F1;
+    background-color: #F97316;
+}
+
+.butao-risco {
+    border: none;
+    color: #F1F1F1;
+    background-color: #DC2626;
+}
+
+.butao-desabilitado {
+    border: none;
+    color: #F1F1F1;
+    background-color: #909090;
+}
+
+/* -------------------- Contorno -------------------- */
+.butao-primario-contorno {
+    color: #0053A0;
+    border: 1px solid #0053A0;
+    background-color: transparent;
+}
+.butao-primario-contorno:hover {
+    color: #F1F1F1;
+    background-color: #0053A0;
+}
+
+.butao-secundario-contorno {
+    color: #F28A2C;
+    border: 1px solid #F28A2C;
+    background-color: transparent;
+}
+.butao-secundario-contorno:hover {
+    color: #F1F1F1;
+    background-color: #F28A2C;
+}
+
+.butao-sucesso-contorno {
+    color: #16A34A;
+    border: 1px solid #16A34A;
+    background-color: transparent;
+}
+.butao-sucesso-contorno:hover {
+    color: #F1F1F1;
+    background-color: #16A34A;
+}
+
+.butao-info-contorno {
+    color: #0EA5E9;
+    border: 1px solid #0EA5E9;
+    background-color: transparent;
+}
+.butao-info-contorno:hover {
+    color: #F1F1F1;
+    background-color: #0EA5E9;
+}
+
+.butao-aviso-contorno {
+    color: #F97316;
+    border: 1px solid #F97316;
+    background-color: transparent;
+}
+.butao-aviso-contorno:hover {
+    color: #F1F1F1;
+    background-color: #F97316;
+}
+
+.butao-risco-contorno {
+    color: #DC2626;
+    border: 1px solid #DC2626;
+    background-color: transparent;
+}
+.butao-risco-contorno:hover {
+    color: #F1F1F1;
+    background-color: #DC2626;
+}
+
+.butao-desabilitado-contorno {
+    color: #909090;
+    border: 1px solid #909090;
+    background-color: transparent;
+}
+.butao-desabilitado-contorno:hover {
+    color: #F1F1F1;
+    background-color: #909090;
+}
+
+.animado:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 10px 50px var(--cor-destaque);
+}

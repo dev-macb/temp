@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --cor-primaria: #0053A0;
+    --cor-secundaria: #F28C2F;
+    --cor-destaque: #0475D7;
+
+    --cor-texto-claro: #909090;
+    --cor-texto-escuro: #303030;
+
+    --cor-background: #f1f1f1;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.tema-escuro {
+    --cor-primaria: #D0D0D0;
+    --cor-secundaria: #909090;
+    --cor-destaque: #606060;
+
+    --cor-texto-claro: #909090;
+    --cor-texto-escuro: #f1f1f1;
+
+    --cor-background: #303030;
+}
+
+h1 {
+    font-size: 2.5vw;
+    cursor: default;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+    background-image: linear-gradient(45deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+h2 {
+    background-image: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria));
+    cursor: default;
+    font-size: 1.5vw;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+}
+
+h3 {
+    color: var(--cor-primaria);
+    font-size: 5vh;
+    transition: 0.5s;
+}
+
+h4 {
+    font-size: 3vh;
+}
+
+h5 {
+    font-size: 2vh;
+    color: var(--cor-destaque);
+}
+
+p {
+    color: var(--cor-primaria); 
+    font-size: 2vh;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+li {
+    align-items: center;
+    display: flex;
+}
+
+button {
+    background-color: var(--cor-background);
+}

@@ -1,0 +1,22 @@
+/* Cabecalho */
+.cabecalho-conteiner {
+    background-color: var(--cor-background);
+    border-bottom: 1px solid var(--cor-texto);
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cabecalho-conteudo {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 60%;
+}
