@@ -71,7 +71,7 @@ h5 {
 }
 
 p {
-    color: var(--cor-primaria); 
+    color: var(--cor-texto-escuro); 
     font-size: 2vh;
 }
 

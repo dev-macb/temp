@@ -35,7 +35,7 @@ const AutenticacaoAdministradorProvider: React.FC<IAutenticacaoAdministradorProv
 
             definirAdministrador({ id: tokenDecodificado.id_usuario });
             ApiServidor.defaults.headers.common['Authorization'] = `Bearer ${ tokenAcesso }`;
-            Cookies.set('kairos.token.administrador', tokenAcesso, { path: '/', expires: 60 * 60 });  // 1 hora
+            Cookies.set('kairos.token.administrador', tokenAcesso, { path: '/admin', expires: 60 * 60 });  // 1 hora
 
             return undefined;
         } 

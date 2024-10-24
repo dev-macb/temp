@@ -8,7 +8,8 @@ import { Divisor } from '../../components/divisor/Divisor';
 import { Butao } from '../../components/butao/Butao';
 import { Entrada } from '../../components/entrada/Entrada';
 import { AutenticacaoAdministradorContext } from '../../contexts/AutenticacaoAdministrador';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { Rodape } from '../../components/rodape/Rodape';
 
 
 const Entrar: React.FC = () => {
@@ -88,9 +89,14 @@ const Entrar: React.FC = () => {
                 </Caixa.Vertical>
                 
             </Secao>
-            <Caixa.Vertical style={{ backgroundColor: 'lightcoral' }}>
-                oioi
-            </Caixa.Vertical>
+            <Rodape textoCopyright='@dev-macb' linkCopyright='https://github.com/dev-macb'>
+                <Caixa.Vertical >
+                    <Divisor />
+                    <Caixa.Horizontal>
+                        <p>Kairos - Uma Oportunidade de tempo!</p>
+                    </Caixa.Horizontal>
+                </Caixa.Vertical>
+            </Rodape>
         </Pagina>
     );
 }
