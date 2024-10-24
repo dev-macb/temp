@@ -36,7 +36,7 @@ const Inicio: React.FC = () => {
             </Cabecalho>
             <Secao style={{ marginTop: '70px' }}>
                 <Caixa.Horizontal>
-                    <Caixa.Vertical>
+                    <Caixa.Vertical style={{ gap: '40px' }}>
                         <Caixa.Horizontal>
                             <div className='secao-apresentacao--titulo'>
                                 <h1 className='titulo-especial'>Uma Tempo Oportuno!</h1>

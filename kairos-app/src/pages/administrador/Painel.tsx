@@ -8,8 +8,10 @@ import { Menu } from '../../components/menu/Menu';
 import { Link } from 'react-router-dom';
 
 import iconeMenuHamburger from '../../assets/icons/MenuHamburger.svg'
+import { MenuLateral } from '../../components/menuLateral/MenuLateral';
+import { Caixa } from '../../components/caixa/Caixa';
 
-const Usuarios: React.FC = () => {
+const Painel: React.FC = () => {
     const { alterarTema } = usarTema();
 
     return (
@@ -26,13 +28,39 @@ const Usuarios: React.FC = () => {
                     <Menu.ButaoItem texto='Cronometragens' onClick={ alterarTema } />
                 </Menu.Butao>
             </Cabecalho>
-            <Secao style={{ marginTop: '70px' }}>
-                <h1>Usuários</h1>
-                <button onClick={ alterarTema }>Alterar Tema</button>
-            </Secao>
+
+        
+            <Caixa.Horizontal style={{ marginTop: '70px', gap: '0', height: '100%', flex: '1' }}>
+                <Caixa.Vertical style={{ width: '25%', borderRight: '1px solid #303030', height: 'calc(100vh - 70px)' }}>
+                    Menu Lateral
+                </Caixa.Vertical>
+
+                <Caixa.Vertical style={{padding: '20px 50px', width: '75%', justifyContent: 'start', height: 'calc(100vh - 70px)', backgroundColor: '#e3e3e3', }}>
+                    
+                        <Caixa.Horizontal style={{ height: 'auto' }}>
+                            <Caixa.Vertical style={{ backgroundColor: 'white', borderRadius: '10px', padding: '20px' }}>
+                                <p>Total de Usuários</p>
+                            </Caixa.Vertical>
+                            <Caixa.Vertical style={{ backgroundColor: 'white', borderRadius: '10px', padding: '20px' }}>
+                                <p>Total de Administradores</p>
+                            </Caixa.Vertical>
+
+                            
+
+                        </Caixa.Horizontal>
+
+                        
+                        <Caixa.Horizontal style={{ height: 'auto' }}>
+                            <h1>Painel</h1>
+                        </Caixa.Horizontal>
+               
+                </Caixa.Vertical>
+            </Caixa.Horizontal>
+
+
         </Pagina>
     );
 }
 
 
-export { Usuarios };
+export { Painel };

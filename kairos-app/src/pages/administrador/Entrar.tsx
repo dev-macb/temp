@@ -10,6 +10,7 @@ import { Entrada } from '../../components/entrada/Entrada';
 import { AutenticacaoAdministradorContext } from '../../contexts/AutenticacaoAdministrador';
 import { Link, Navigate } from 'react-router-dom';
 import { Rodape } from '../../components/rodape/Rodape';
+import { Menu } from '../../components/menu/Menu';
 
 
 const Entrar: React.FC = () => {
@@ -91,9 +92,11 @@ const Entrar: React.FC = () => {
             </Secao>
             <Rodape textoCopyright='@dev-macb' linkCopyright='https://github.com/dev-macb'>
                 <Caixa.Vertical >
-                    <Divisor />
+                    <Divisor cor='#909090' />
                     <Caixa.Horizontal>
-                        <p>Kairos - Uma Oportunidade de tempo!</p>
+                        <Menu.CabecalhoMenu>
+                            <Menu.CabecalhoItemMenu texto='Início' link='/'/>
+                        </Menu.CabecalhoMenu>
                     </Caixa.Horizontal>
                 </Caixa.Vertical>
             </Rodape>
