@@ -6,8 +6,8 @@ import { ENomeTabelas } from '../../../database/ENomeTabelas';
 const buscarTodos = async (pagina: number, limite: number, filtro: string): Promise<Partial<IUsuario>[] | Error> => {
     try {
         const resultado = await Knex(ENomeTabelas.usuarios)
-            .select('id', 'nome_completo', 'cpf', 'data_nascimento', 'sexo', 'tipo')
-            .where('nome_completo', 'like', `%${filtro}%`)
+            .select('id', 'nome', 'cpf', 'nascimento', 'sexo', 'tipo')
+            .where('nome', 'like', `%${filtro}%`)
             .offset((pagina - 1) * limite)
             .limit(limite);
 

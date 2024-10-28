@@ -7,12 +7,12 @@ import { UsuarioController } from '../controllers/usuario';
 const rotiadorPrivado = Router();
 
 
-rotiadorPrivado.post('/administrador', autorizacaoAdministrador, AdministradorController.validarCriar, AdministradorController.criar);
-rotiadorPrivado.delete('/administrador/:id', autorizacaoAdministrador, AdministradorController.validarDeletar, AdministradorController.deletar);
-rotiadorPrivado.put('/administrador/:id', autorizacaoAdministrador, AdministradorController.validarAtualizar, AdministradorController.atualizar);
-rotiadorPrivado.get('/administrador', autorizacaoAdministrador, AdministradorController.validarBuscarTodos, AdministradorController.buscarTodos);
-rotiadorPrivado.get('/administrador/:id', autorizacaoAdministrador, AdministradorController.validarBuscarPorId, AdministradorController.buscarPorId);
-rotiadorPrivado.post('/entrar', AdministradorController.validarAutenticar,  AdministradorController.autenticar);
+rotiadorPrivado.post('/administradores', autorizacaoAdministrador, AdministradorController.validarCriar, AdministradorController.criar);
+rotiadorPrivado.delete('/administradores/:id', autorizacaoAdministrador, AdministradorController.validarDeletar, AdministradorController.deletar);
+rotiadorPrivado.put('/administradores/:id', autorizacaoAdministrador, AdministradorController.validarAtualizar, AdministradorController.atualizar);
+rotiadorPrivado.get('/administradores', autorizacaoAdministrador, AdministradorController.validarBuscarTodos, AdministradorController.buscarTodos);
+rotiadorPrivado.get('/administradores/:id', autorizacaoAdministrador, AdministradorController.validarBuscarPorId, AdministradorController.buscarPorId);
+rotiadorPrivado.post('/administradores/entrar', AdministradorController.validarAutenticar,  AdministradorController.autenticar);
 
 rotiadorPrivado.post('/usuarios', autorizacaoAdministrador, UsuarioController.validarCriar, UsuarioController.criar);
 rotiadorPrivado.delete('/usuarios/:id', autorizacaoAdministrador, UsuarioController.validarDeletar, UsuarioController.deletar);

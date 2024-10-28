@@ -22,7 +22,7 @@ const validarBuscarTodos = ValidarConsulta(obterEsquema => ({
 
 
 const buscarTodos = async (request: Request<{}, {}, {}, IConsulta>, response: Response) => {
-    const contagem = await UsuarioProvider.contar('nome_completo', request.query.filtro);
+    const contagem = await UsuarioProvider.contar('nome', request.query.filtro);
     const resultado = await UsuarioProvider.buscarTodos(request.query.pagina || 1, request.query.limite || 5, request.query.filtro || '');
     
     if (resultado instanceof Error) return response.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ erro: resultado.message }); 

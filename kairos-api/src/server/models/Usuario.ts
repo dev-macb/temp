@@ -1,19 +1,18 @@
-interface UsuarioModel {
+import { ETiposSexo } from "../enums/TiposSexos";
+import { ETiposUsuario } from "../enums/TiposUsuarios";
+
+
+interface IUsuario {
     id: string;
-    tipo: number;
+    tipo: ETiposUsuario;
     cpf: string;
-    nome_completo: string;
-    data_nascimento: Date;
-    sexo: number;
-    nome_equipe?: string;
-    cep?: string;
-    logradouro?: string;
-    complemento?: string;
-    numero?: number;
-    bairro?: string;
-    cidade?: string;
-    estado?: string;
-    telefone: string;
+    apelido: string;
+    nome: string;
+    nascimento: Date;
+    sexo: ETiposSexo;
+    pcd: boolean;
+    equipe?: string;
+    telefone?: string;
     email: string;
     senha: string;
     ativo: boolean;
@@ -22,4 +21,4 @@ interface UsuarioModel {
 }
 
 
-export { UsuarioModel };
+export { IUsuario };

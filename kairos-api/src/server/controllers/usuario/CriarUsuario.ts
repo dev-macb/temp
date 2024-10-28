@@ -6,30 +6,30 @@ import { StatusCodes } from 'http-status-codes';
 import { UsuarioProvider } from '../../providers/usuario';
 import { ValidarConsulta } from '../../middlewares/ValidarConsulta';
 import { ETiposUsuario } from '../../enums/TiposUsuarios';
+import { ETiposSexo } from '../../enums/TiposSexos';
 
 interface ICorpo extends Omit<IUsuario, 'id' | 'criado_em' | 'atualizado_em'> { }
 
 
 const validarCriar = ValidarConsulta((obterEsquema) => ({
-    body: obterEsquema<ICorpo>(yup.object().shape({
-        tipo: yup.number().required().oneOf(Object.values(ETiposUsuario) as number[]),
+    body: obterEsquema<ICorpo>(yup.object({
+        tipo: yup.mixed<ETiposUsuario>()
+            .oneOf(Object.values(ETiposUsuario) as readonly ETiposUsuario[])
+            .required(),
         cpf: yup.string().required().min(11).max(14),
-        nome_completo: yup.string().required().min(4).max(100),
-        data_nascimento: yup.date().required(),
-        sexo: yup.string().required(),
-        nome_equipe: yup.string().optional().max(50),
-        cep: yup.string().optional().min(8).max(10),
-        logradouro: yup.string().optional().max(100),
-        complemento: yup.string().optional().max(100),
-        numero: yup.number().integer().optional(),
-        bairro: yup.string().optional().max(100),
-        cidade: yup.string().optional().max(100),
-        estado: yup.string().optional().max(2),
-        telefone: yup.string().required().min(8).max(14),
+        apelido: yup.string().required().min(4).max(100),
+        nome: yup.string().required().min(4).max(100),
+        nascimento: yup.date().required(),
+        sexo: yup.mixed<ETiposSexo>()
+            .oneOf(Object.values(ETiposSexo) as readonly ETiposSexo[])
+            .required(),
+        pcd: yup.boolean().required(),
+        equipe: yup.string().optional().max(50),
+        telefone: yup.string().optional().min(8).max(14),
         email: yup.string().email().required().min(5).max(200),
         senha: yup.string().required().min(8).max(200),
         ativo: yup.boolean().required().default(true),
-    })),
+    }) as yup.ObjectSchema<ICorpo>) 
 }));
 
 

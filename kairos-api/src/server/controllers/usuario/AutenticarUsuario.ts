@@ -7,10 +7,8 @@ import { JWTService, HashService } from '../../services';
 import { UsuarioProvider } from '../../providers/usuario';
 
 
-interface ICorpo extends Omit<IUsuario, 'id' | 'tipo' | 'cpf' | 'nome_completo' | 
-    'data_nascimento' | 'sexo' | 'nome_equipe' | 'cep' | 'logradouro' | 'complemento' | 
-    'numero' | 'bairro' | 'cidade' | 'estado' | 'telefone' | 'ativo' | 'criado_em' | 
-    'atualizado_em'> { }
+interface ICorpo extends Omit<IUsuario, 'id' | 'tipo' | 'cpf' | 'apelido' | 'nome' | 'nascimento' | 
+    'sexo' | 'equipe' | 'pcd' | 'telefone' | 'ativo' | 'criado_em' | 'atualizado_em'> { }
 
 
 const validarAutenticar = ValidarConsulta((obterEsquema) => ({

@@ -13,14 +13,6 @@ const seed = async (knex: Knex): Promise<void> => {
     await knex(ENomeTabelas.administradores).insert([
         {
             tipo: 1,
-            apelido: ADM_APELIDO || 'cronos',
-            email: ADM_EMAIL || 'cronos@email.com',
-            senha: hash,
-            criado_em: knex.fn.now(),
-            atualizado_em: knex.fn.now()
-        },
-        {
-            tipo: 2,
             apelido: 'kairos',
             email: 'kairos@email.com',
             senha: hash,
