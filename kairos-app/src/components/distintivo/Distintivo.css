@@ -1,0 +1,52 @@
+/* Distintivo */
+.distintivo {
+    font-size: 1em;
+    color: #F1F1F1;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: normal;
+    display: inline-block;
+}
+
+/* Tamanho */
+.distintivo.pequeno {
+    font-size: 0.8em;
+    padding: 3px 10px;
+}
+
+.distintivo.grande {
+    font-size: 1.2em;
+    padding: 5px 30px;
+    font-weight: bold;
+}
+
+/* Arredondado */
+.distintivo.arredondado {
+    border-radius: 30px;
+}
+
+/* Tipo */
+.normal {
+    color: #303030;
+    background-color: #F1F1F1;
+}
+
+.info {
+    color: #F1F1F1;
+    background-color: #007BFF;
+}
+
+.sucesso {
+    color: #F1F1F1;
+    background-color: #28A745;
+}
+
+.aviso {
+    color: #F1F1F1;
+    background-color: #FFC107;
+}
+
+.erro {
+    color: #F1F1F1;
+    background-color: #DC3545;
+}

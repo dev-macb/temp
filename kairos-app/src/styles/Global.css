@@ -46,13 +46,9 @@ h1 {
 }
 
 h2 {
-    background-image: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria));
+    color: #606060;
     cursor: default;
-    font-size: 1.5vw;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent; 
+    font-size: 2vw;
 }
 
 h3 {
@@ -62,7 +58,8 @@ h3 {
 }
 
 h4 {
-    font-size: 3vh;
+    font-size: 1.2rem;
+    color: #303030;
 }
 
 h5 {

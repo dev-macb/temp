@@ -4,35 +4,33 @@ import { useContext } from 'react';
 import { PrivadoRouter } from './Privado';
 import { Inicio } from '../pages/usuario/Inicio';
 import { Entrar } from '../pages/administrador/Entrar';
-import { Painel } from '../pages/administrador/Painel';
+import { Painel } from '../pages/administrador/BaseAdministrador';
 import { Usuarios } from '../pages/administrador/Usuarios';
 import { AutenticacaoAdministradorContext } from '../contexts/AutenticacaoAdministrador';
+import RotaPrivada from './RotasAdministrador';
+import { Eventos } from '../pages/usuario/Eventos';
+import { Dashboard } from '../pages/administrador/Painel';
 
 const Rotiador = () => {
     const { estaAutenticado } = useContext(AutenticacaoAdministradorContext);
 
     return (
         <BrowserRouter>
-            <Routes>
-                {/* Rota pública */}
-                <Route path='/' element={<Inicio />} />
+                <Routes>
+                    <Route path="/" element={<Inicio />} />
+                    <Route path="/eventos" element={<Eventos />} />
+                    <Route path="/admin/entrar" element={<Entrar />} />
 
-                {/* Página de login do admin */}
-                <Route path='/admin/entrar' element={<Entrar />} />
+                    <Route path="/admin" element={<RotaPrivada />}>
+                        <Route index element={<Dashboard />} />
+                        <Route path="painel" element={<Painel />} /> {/* /admin/painel */}
+                        <Route path="usuarios" element={<Usuarios />} /> {/* /admin/usuarios */}
+                    </Route>
 
-                {/* Redireciona para painel se o admin estiver logado, ou para login se não estiver */}
-                <Route path='/admin' element={estaAutenticado ? <Navigate to='/admin/painel' /> : <Navigate to='/admin/entrar' />} />
-
-                {/* Rotas privadas administrativas */}
-                <Route element={<PrivadoRouter />}>
-                    <Route path='/admin/painel' element={<Painel />} />
-                    <Route path='/admin/usuarios' element={<Usuarios />} />
-                </Route>
-
-                {/* Redirecionamento para rotas inexistentes */}
-                <Route path='*' element={<Navigate to='/' />} />
-            </Routes>
-        </BrowserRouter>
+                    {/* Página de erro 404 */}
+                    <Route path="*" element={<Inicio />} />
+                </Routes>
+            </BrowserRouter>
     );
 };
 

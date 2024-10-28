@@ -1,0 +1,33 @@
+.tabela-conteiner {
+    border-radius: 10px;
+    border: 1px solid #909090;
+    padding-bottom: 20px;
+    background-color: lightblue;
+    width: 100%;
+}
+
+
+.tabela-conteudo {
+    display: flex;
+    overflow: hidden;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela-conteudo th {
+    color: #303030;
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #909090;
+}
+  
+.tabela-conteudo td {
+    height: 70px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #909090;
+    
+}
+
+.tabela-conteudo tbody tr:hover {
+    background-color: #FAFAFA;
+}

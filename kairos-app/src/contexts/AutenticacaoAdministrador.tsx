@@ -4,7 +4,7 @@ import { ReactNode, createContext, useEffect, useState } from 'react';
 import { ApiServidor } from '../services/Api';
 
 interface IAdministrador {
-    id: number;
+    id: string;
 }
 
 interface IAutenticacaoAdministradorContext {

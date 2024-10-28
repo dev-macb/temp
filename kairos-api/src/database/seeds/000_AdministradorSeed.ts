@@ -10,14 +10,24 @@ const seed = async (knex: Knex): Promise<void> => {
     const { ADM_APELIDO, ADM_EMAIL, ADM_SENHA } = process.env;
 
     const hash = await HashService.criptografar(ADM_SENHA || 'S3nh4F0rt3');
-    await knex(ENomeTabelas.administradores).insert([{
-        tipo: 1,
-        apelido: ADM_APELIDO || 'kairos',
-        email: ADM_EMAIL || 'kairos@email.com',
-        senha: hash,
-        criado_em: knex.fn.now(),
-        atualizado_em: knex.fn.now()
-    }]);
+    await knex(ENomeTabelas.administradores).insert([
+        {
+            tipo: 1,
+            apelido: ADM_APELIDO || 'cronos',
+            email: ADM_EMAIL || 'cronos@email.com',
+            senha: hash,
+            criado_em: knex.fn.now(),
+            atualizado_em: knex.fn.now()
+        },
+        {
+            tipo: 2,
+            apelido: 'kairos',
+            email: 'kairos@email.com',
+            senha: hash,
+            criado_em: knex.fn.now(),
+            atualizado_em: knex.fn.now()
+        }
+    ]);
 };
 
 

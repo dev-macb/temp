@@ -1,16 +1,23 @@
 import './styles/Global.css';
 
-import { Rotiador } from './routes/Rotiador';
 import { TemaProvider } from './contexts/TemaContext';
 import { AutenticacaoAdministradorProvider } from './contexts/AutenticacaoAdministrador';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RotasAdministrador } from './routes/RotasAdministrador';
+import { RotasUsuario } from './routes/Usuario';
 
 const App = () => {
     return (
-        <AutenticacaoAdministradorProvider>
-            <TemaProvider>
-                <Rotiador />
-            </TemaProvider>
-        </AutenticacaoAdministradorProvider>
+        <TemaProvider>
+            <BrowserRouter>
+                <AutenticacaoAdministradorProvider>
+                    <Routes>
+                    <Route path="/admin/*" element={<RotasAdministrador />} />
+                    <Route path="/*" element={<RotasUsuario />} />
+                    </Routes>
+                </AutenticacaoAdministradorProvider>
+            </BrowserRouter>
+        </TemaProvider>
     );
 }
 

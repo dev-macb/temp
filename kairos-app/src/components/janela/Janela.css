@@ -1,0 +1,73 @@
+/* -------------------- Conteiner -------------------- */
+.janela-sobreposicao {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+  
+.janela-conteiner {
+    padding: 20px;
+    min-width: 300px;
+    max-width: 900px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.janela-conteudo {
+    display: flex;
+    color: #303030;
+    flex-direction: column;
+}
+
+
+/* -------------------- Cabeçalho -------------------- */
+.janela-cabecalho {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.janela-cabecalho h3 {
+    font-size: 1.5em;
+}
+
+.janela-cabecalho button {
+    border: none;
+    display: flex;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.janela-cabecalho button:hover {
+    border: none;
+    font-weight: 700;
+    background-color: #F3F3F3;
+}
+
+
+/* -------------------- Conteúdo -------------------- */
+.janela-main-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* -------------------- Rodape -------------------- */
+.janela-footer {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}

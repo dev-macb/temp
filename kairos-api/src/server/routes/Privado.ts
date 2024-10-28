@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { autorizacaoAdministrador } from '../middlewares';
 import { AdministradorController } from '../controllers/administrador';
+import { UsuarioController } from '../controllers/usuario';
 
 
 const rotiadorPrivado = Router();
@@ -13,5 +14,10 @@ rotiadorPrivado.get('/administrador', autorizacaoAdministrador, AdministradorCon
 rotiadorPrivado.get('/administrador/:id', autorizacaoAdministrador, AdministradorController.validarBuscarPorId, AdministradorController.buscarPorId);
 rotiadorPrivado.post('/entrar', AdministradorController.validarAutenticar,  AdministradorController.autenticar);
 
+rotiadorPrivado.post('/usuarios', autorizacaoAdministrador, UsuarioController.validarCriar, UsuarioController.criar);
+rotiadorPrivado.delete('/usuarios/:id', autorizacaoAdministrador, UsuarioController.validarDeletar, UsuarioController.deletar);
+rotiadorPrivado.put('/usuarios/:id', autorizacaoAdministrador, UsuarioController.validarAtualizar, UsuarioController.atualizar);
+rotiadorPrivado.get('/usuarios', autorizacaoAdministrador, UsuarioController.validarBuscarTodos, UsuarioController.buscarTodos);
+rotiadorPrivado.get('/usuarios/:id', autorizacaoAdministrador, UsuarioController.validarBuscarPorId, UsuarioController.buscarPorId);
 
 export { rotiadorPrivado };
